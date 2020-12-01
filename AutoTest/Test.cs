@@ -55,6 +55,7 @@ namespace AutoTest
         }
 
         [Test]
+        [Category("pageobject")]
         public void Test_2()
         {
             driver.Navigate().GoToUrl("https://www.google.ru");
