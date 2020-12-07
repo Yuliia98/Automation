@@ -55,19 +55,92 @@ namespace AutoTest
         }
 
         [Test]
-        [Category("pageobject")]
         public void Test_2()
         {
             driver.Navigate().GoToUrl("https://www.google.ru");
-            PageHome pageHome = new PageHome(); // чтобы могли обращаться к объектам из PageHome.cs
-            PageFactory.InitElements(driver, pageHome); // инициализация элементов Page Object из PageHome.cs
-            pageHome.TxtSearchForm.Click(); // кликаем в поле ввода поисковой фразы
-            pageHome.TxtSearchForm.SendKeys("В чём сила брат?"); // вводим поисковую фразу
-            pageHome.BtnSearchSubmit.Click(); // нажимаем на кнопку "Поиск в Google"
-            Thread.Sleep(5000); // пауза за наблюдением результата поиска, для наглядности
-            PageResultSearch pageResult = new PageResultSearch(); // чтобы могли обращаться к объектам из PageResultSearch.cs
-            PageFactory.InitElements(driver, pageResult); // инициализация элементов Page Object из PageResultSearch.cs
-            pageResult.LnkLogo.Click(); // возвращаемся на главную страницу кликнув по логотипу
+            driver.FindElement(By.CssSelector("input[title='Поиск']")).Click(); // кликаем в поле ввода поисковой фразы
+            driver.FindElement(By.CssSelector("input[title='Поиск']")).SendKeys("В чём сила брат?"); // вводим поисковую фразу
+            //driver.FindElement(By.CssSelector("input[value='Поиск в Google']")).Click(); // нажимаем на кнопку "Поиск в Google"
+            //Thread.Sleep(5000); // пауза за наблюдением результата поиска, для наглядности
+            //driver.FindElement(By.CssSelector("a#logo")).Click(); // возвращаемся на главную страницу кликнув по логотипу
+            Thread.Sleep(5000); // пауза за наблюдением перехода на главную, для наглядности
+        }
+
+        [Test]
+        public void Test_3()
+        {
+            driver.Navigate().GoToUrl("https://www.google.ru");
+            driver.FindElement(By.CssSelector("input[title='Поиск']")).Click(); // кликаем в поле ввода поисковой фразы
+            driver.FindElement(By.CssSelector("input[title='Поиск']")).SendKeys("В чём сила брат?"); // вводим поисковую фразу
+            //driver.FindElement(By.CssSelector("input[value='Поиск в Google']")).Click(); // нажимаем на кнопку "Поиск в Google"
+            //Thread.Sleep(5000); // пауза за наблюдением результата поиска, для наглядности
+            //driver.FindElement(By.CssSelector("a#logo")).Click(); // возвращаемся на главную страницу кликнув по логотипу
+            Thread.Sleep(5000); // пауза за наблюдением перехода на главную, для наглядности
+        }
+        [Test]
+        public void Test_4()
+        {
+            driver.Navigate().GoToUrl("https://www.google.ru");
+            driver.FindElement(By.CssSelector("input[title='Поиск']")).Click(); // кликаем в поле ввода поисковой фразы
+            driver.FindElement(By.CssSelector("input[title='Поиск']")).SendKeys("В чём сила брат?"); // вводим поисковую фразу
+            //driver.FindElement(By.CssSelector("input[value='Поиск в Google']")).Click(); // нажимаем на кнопку "Поиск в Google"
+            //Thread.Sleep(5000); // пауза за наблюдением результата поиска, для наглядности
+            //driver.FindElement(By.CssSelector("a#logo")).Click(); // возвращаемся на главную страницу кликнув по логотипу
+            Thread.Sleep(5000); // пауза за наблюдением перехода на главную, для наглядности
+        }
+        [Test]
+        public void Test_5()
+        {
+            driver.Navigate().GoToUrl("https://www.google.ru");
+            driver.FindElement(By.CssSelector("input[title='Поиск']")).Click(); // кликаем в поле ввода поисковой фразы
+            driver.FindElement(By.CssSelector("input[title='Поиск']")).SendKeys("В чём сила брат?"); // вводим поисковую фразу
+            //driver.FindElement(By.CssSelector("input[value='Поиск в Google']")).Click(); // нажимаем на кнопку "Поиск в Google"
+            //Thread.Sleep(5000); // пауза за наблюдением результата поиска, для наглядности
+            //driver.FindElement(By.CssSelector("a#logo")).Click(); // возвращаемся на главную страницу кликнув по логотипу
+            Thread.Sleep(5000); // пауза за наблюдением перехода на главную, для наглядности
+        }
+        [Test]
+        public void Test_6()
+        {
+            driver.Navigate().GoToUrl("https://www.google.ru");
+            driver.FindElement(By.CssSelector("input[title='Поиск']")).Click(); // кликаем в поле ввода поисковой фразы
+            driver.FindElement(By.CssSelector("input[title='Поиск']")).SendKeys("В чём сила брат?"); // вводим поисковую фразу
+            //driver.FindElement(By.CssSelector("input[value='Поиск в Google']")).Click(); // нажимаем на кнопку "Поиск в Google"
+            //Thread.Sleep(5000); // пауза за наблюдением результата поиска, для наглядности
+            //driver.FindElement(By.CssSelector("a#logo")).Click(); // возвращаемся на главную страницу кликнув по логотипу
+            Thread.Sleep(5000); // пауза за наблюдением перехода на главную, для наглядности
+        }
+        [Test]
+        public void Test_7()
+        {
+            driver.Navigate().GoToUrl("https://www.google.ru");
+            driver.FindElement(By.CssSelector("input[title='Поиск']")).Click(); // кликаем в поле ввода поисковой фразы
+            driver.FindElement(By.CssSelector("input[title='Поиск']")).SendKeys("В чём сила брат?"); // вводим поисковую фразу
+            //driver.FindElement(By.CssSelector("input[value='Поиск в Google']")).Click(); // нажимаем на кнопку "Поиск в Google"
+            //Thread.Sleep(5000); // пауза за наблюдением результата поиска, для наглядности
+            //driver.FindElement(By.CssSelector("a#logo")).Click(); // возвращаемся на главную страницу кликнув по логотипу
+            Thread.Sleep(5000); // пауза за наблюдением перехода на главную, для наглядности
+        }
+        [Test]
+        public void Test_8()
+        {
+            driver.Navigate().GoToUrl("https://www.google.ru");
+            driver.FindElement(By.CssSelector("input[title='Поиск']")).Click(); // кликаем в поле ввода поисковой фразы
+            driver.FindElement(By.CssSelector("input[title='Поиск']")).SendKeys("В чём сила брат?"); // вводим поисковую фразу
+            //driver.FindElement(By.CssSelector("input[value='Поиск в Google']")).Click(); // нажимаем на кнопку "Поиск в Google"
+            //Thread.Sleep(5000); // пауза за наблюдением результата поиска, для наглядности
+            //driver.FindElement(By.CssSelector("a#logo")).Click(); // возвращаемся на главную страницу кликнув по логотипу
+            Thread.Sleep(5000); // пауза за наблюдением перехода на главную, для наглядности
+        }
+        [Test]
+        public void Test_9()
+        {
+            driver.Navigate().GoToUrl("https://www.google.ru");
+            driver.FindElement(By.CssSelector("input[title='Поиск']")).Click(); // кликаем в поле ввода поисковой фразы
+            driver.FindElement(By.CssSelector("input[title='Поиск']")).SendKeys("В чём сила брат?"); // вводим поисковую фразу
+            //driver.FindElement(By.CssSelector("input[value='Поиск в Google']")).Click(); // нажимаем на кнопку "Поиск в Google"
+            //Thread.Sleep(5000); // пауза за наблюдением результата поиска, для наглядности
+            //driver.FindElement(By.CssSelector("a#logo")).Click(); // возвращаемся на главную страницу кликнув по логотипу
             Thread.Sleep(5000); // пауза за наблюдением перехода на главную, для наглядности
         }
     }
