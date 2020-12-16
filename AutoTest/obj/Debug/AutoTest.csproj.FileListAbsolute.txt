@@ -17,6 +17,7 @@ C:\Users\acer\Downloads\article20171007671\AutoTest\AutoTest\bin\Debug\Selenium.
 C:\Users\acer\Downloads\article20171007671\AutoTest\AutoTest\bin\Debug\ThoughtWorks.Selenium.Core.xml
 C:\Users\acer\Downloads\article20171007671\AutoTest\AutoTest\bin\Debug\WebDriver.xml
 C:\Users\acer\Downloads\article20171007671\AutoTest\AutoTest\bin\Debug\WebDriver.Support.xml
+C:\Users\acer\Downloads\article20171007671\AutoTest\AutoTest\obj\Debug\AutoTest.csprojAssemblyReference.cache
 C:\Users\acer\Downloads\article20171007671\AutoTest\AutoTest\obj\Debug\AutoTest.csproj.CoreCompileInputs.cache
 C:\Users\acer\Downloads\article20171007671\AutoTest\AutoTest\obj\Debug\AutoTest.csproj.CopyComplete
 C:\Users\acer\Downloads\article20171007671\AutoTest\AutoTest\obj\Debug\AutoTest.dll
