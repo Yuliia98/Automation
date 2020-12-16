@@ -24,6 +24,7 @@ namespace AutoTest
             ChromeOptions options = new ChromeOptions();
             options.AddArguments("--ignore-certificate-errors");
             options.AddArguments("--ignore-ssl-errors");
+            options.AddArgument("no-sandbox");
             driver = new ChromeDriver(igWorkDir, options);
             driver.Manage().Window.Maximize();
         }
