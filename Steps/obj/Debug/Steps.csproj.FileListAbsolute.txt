@@ -1,6 +1,7 @@
 C:\Users\acer\Downloads\article20171007671\AutoTest\Steps\bin\Debug\Steps.exe.config
 C:\Users\acer\Downloads\article20171007671\AutoTest\Steps\bin\Debug\Steps.exe
 C:\Users\acer\Downloads\article20171007671\AutoTest\Steps\bin\Debug\Steps.pdb
+C:\Users\acer\Downloads\article20171007671\AutoTest\Steps\obj\Debug\Steps.csprojAssemblyReference.cache
 C:\Users\acer\Downloads\article20171007671\AutoTest\Steps\obj\Debug\Steps.csproj.CoreCompileInputs.cache
 C:\Users\acer\Downloads\article20171007671\AutoTest\Steps\obj\Debug\Steps.exe
 C:\Users\acer\Downloads\article20171007671\AutoTest\Steps\obj\Debug\Steps.pdb
