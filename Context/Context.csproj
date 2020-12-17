@@ -47,6 +47,16 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sections\AboutPageNavigationSection.cs" />
+    <Compile Include="sections\AdditionalPostDataSection.cs" />
+    <Compile Include="sections\CommentSection.cs" />
+    <Compile Include="sections\ContactSection.cs" />
+    <Compile Include="sections\ControlSection.cs" />
+    <Compile Include="sections\HeaderSection.cs" />
+    <Compile Include="sections\LoginHeaderSection.cs" />
+    <Compile Include="sections\PostControlButtonSection.cs" />
+    <Compile Include="sections\SettingsSection.cs" />
+    <Compile Include="sections\UserMenuSection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
