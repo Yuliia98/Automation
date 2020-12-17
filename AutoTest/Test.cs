@@ -18,7 +18,7 @@ namespace AutoTest
         public static string igWorkDir = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location); // рабочий каталог, относительно исполняемого файла (в нашем случае относительно DLL)
         public static IWebDriver driver;
 
-        [OneTimeSetUp] // вызывается перед началом запуска всех тестов
+        [OneTimeSetUp]
         public void OneTimeSetUp()
         {
             ChromeOptions options = new ChromeOptions();
@@ -49,96 +49,79 @@ namespace AutoTest
             Build.buildAutoTest(path);
         }
 
-        public static void Test_2()
+        public static void Case_1()
         {
-            driver.Navigate().GoToUrl("https://www.google.ru");
-            driver.FindElement(By.CssSelector("input[title='Поиск']")).Click(); // кликаем в поле ввода поисковой фразы
-            driver.FindElement(By.CssSelector("input[title='Поиск']")).SendKeys("В чём сила брат?"); // вводим поисковую фразу
-            //driver.FindElement(By.CssSelector("input[value='Поиск в Google']")).Click(); // нажимаем на кнопку "Поиск в Google"
-            //Thread.Sleep(5000); // пауза за наблюдением результата поиска, для наглядности
-            //driver.FindElement(By.CssSelector("a#logo")).Click(); // возвращаемся на главную страницу кликнув по логотипу
-            Thread.Sleep(5000); // пауза за наблюдением перехода на главную, для наглядности
+            driver.Navigate().GoToUrl("https://pethouse.ua/");
+            Thread.Sleep(5000);
         }
 
-        
-        public static void Test_3()
+        public static void Case_2()
         {
-            driver.Navigate().GoToUrl("https://www.google.ru");
-            driver.FindElement(By.CssSelector("input[title='Поиск']")).Click(); // кликаем в поле ввода поисковой фразы
-            driver.FindElement(By.CssSelector("input[title='Поиск']")).SendKeys("Аниме Боруто?"); // вводим поисковую фразу
-            //driver.FindElement(By.CssSelector("input[value='Поиск в Google']")).Click(); // нажимаем на кнопку "Поиск в Google"
-            //Thread.Sleep(5000); // пауза за наблюдением результата поиска, для наглядности
-            //driver.FindElement(By.CssSelector("a#logo")).Click(); // возвращаемся на главную страницу кликнув по логотипу
-            Thread.Sleep(5000); // пауза за наблюдением перехода на главную, для наглядности
+            driver.Navigate().GoToUrl("https://pethouse.ua/");
+            Thread.Sleep(5000);
         }
-      
-        public static void Test_4()
-        {
-            driver.Navigate().GoToUrl("https://www.google.ru");
-            driver.FindElement(By.CssSelector("input[title='Поиск']")).Click(); // кликаем в поле ввода поисковой фразы
-            driver.FindElement(By.CssSelector("input[title='Поиск']")).SendKeys("Аниме Наруто?"); // вводим поисковую фразу
-            //driver.FindElement(By.CssSelector("input[value='Поиск в Google']")).Click(); // нажимаем на кнопку "Поиск в Google"
-            //Thread.Sleep(5000); // пауза за наблюдением результата поиска, для наглядности
-            //driver.FindElement(By.CssSelector("a#logo")).Click(); // возвращаемся на главную страницу кликнув по логотипу
-            Thread.Sleep(5000); // пауза за наблюдением перехода на главную, для наглядности
-        }
-        
-        public static void Test_5()
-        {
-            driver.Navigate().GoToUrl("https://www.google.ru");
-            driver.FindElement(By.CssSelector("input[title='Поиск']")).Click(); // кликаем в поле ввода поисковой фразы
-            driver.FindElement(By.CssSelector("input[title='Поиск']")).SendKeys("Аниме Шанхай?"); // вводим поисковую фразу
-            //driver.FindElement(By.CssSelector("input[value='Поиск в Google']")).Click(); // нажимаем на кнопку "Поиск в Google"
-            //Thread.Sleep(5000); // пауза за наблюдением результата поиска, для наглядности
-            //driver.FindElement(By.CssSelector("a#logo")).Click(); // возвращаемся на главную страницу кликнув по логотипу
-            Thread.Sleep(5000); // пауза за наблюдением перехода на главную, для наглядности
-        }
-       
 
-        public static void Test_6()
-        {
-            driver.Navigate().GoToUrl("https://www.google.ru");
-            driver.FindElement(By.CssSelector("input[title='Поиск']")).Click(); // кликаем в поле ввода поисковой фразы
-            driver.FindElement(By.CssSelector("input[title='Поиск']")).SendKeys("В чём сила брат?"); // вводим поисковую фразу
-            //driver.FindElement(By.CssSelector("input[value='Поиск в Google']")).Click(); // нажимаем на кнопку "Поиск в Google"
-            //Thread.Sleep(5000); // пауза за наблюдением результата поиска, для наглядности
-            //driver.FindElement(By.CssSelector("a#logo")).Click(); // возвращаемся на главную страницу кликнув по логотипу
-            Thread.Sleep(5000); // пауза за наблюдением перехода на главную, для наглядности
-        }
-       
 
-        public void Test_7()
+        public static void Case_3()
         {
-            driver.Navigate().GoToUrl("https://www.google.ru");
-            driver.FindElement(By.CssSelector("input[title='Поиск']")).Click(); // кликаем в поле ввода поисковой фразы
-            driver.FindElement(By.CssSelector("input[title='Поиск']")).SendKeys("В чём сила брат?"); // вводим поисковую фразу
-            //driver.FindElement(By.CssSelector("input[value='Поиск в Google']")).Click(); // нажимаем на кнопку "Поиск в Google"
-            //Thread.Sleep(5000); // пауза за наблюдением результата поиска, для наглядности
-            //driver.FindElement(By.CssSelector("a#logo")).Click(); // возвращаемся на главную страницу кликнув по логотипу
-            Thread.Sleep(5000); // пауза за наблюдением перехода на главную, для наглядности
+            var icon = driver.FindElement(By.CssSelector("span.header-profile-ico"));
+            var actualIconText = icon.Text;
+            if (actualIconText != "Y")
+            {
+                //icon.Click();
+                Thread.Sleep(100000);
+                //driver.FindElement(By.CssSelector("div.register-new-header")).Click();
+               // driver.FindElement(By.CssSelector("input.register-new-input-text.clear-chrome")).SendKeys("yulia.shishman@gmail.com");
+                //driver.FindElement(By.CssSelector("input.register-new-input-text.clear-chrome")).SendKeys("Shishman4567");
+                //driver.FindElement(By.Id("wlpeSaveRegisterButton")).Click();
+                //Thread.Sleep(10000);
+                //Assert.That(actualIconText, Is.EqualTo("Y"), "Wrong icon is displayed on header");
+            }
         }
-        
-        public void Test_8()
-        {
-            driver.Navigate().GoToUrl("https://www.google.ru");
-            driver.FindElement(By.CssSelector("input[title='Поиск']")).Click(); // кликаем в поле ввода поисковой фразы
-            driver.FindElement(By.CssSelector("input[title='Поиск']")).SendKeys("В чём сила брат?"); // вводим поисковую фразу
-            //driver.FindElement(By.CssSelector("input[value='Поиск в Google']")).Click(); // нажимаем на кнопку "Поиск в Google"
-            //Thread.Sleep(5000); // пауза за наблюдением результата поиска, для наглядности
-            //driver.FindElement(By.CssSelector("a#logo")).Click(); // возвращаемся на главную страницу кликнув по логотипу
-            Thread.Sleep(5000); // пауза за наблюдением перехода на главную, для наглядности
-        }
-       
 
-        public void Test_9()
+        public static void Case_4()
         {
-            driver.Navigate().GoToUrl("https://www.google.ru");
-            driver.FindElement(By.CssSelector("input[title='Поиск']")).Click(); // кликаем в поле ввода поисковой фразы
-            driver.FindElement(By.CssSelector("input[title='Поиск']")).SendKeys("В чём сила брат?"); // вводим поисковую фразу
-            //driver.FindElement(By.CssSelector("input[value='Поиск в Google']")).Click(); // нажимаем на кнопку "Поиск в Google"
-            //Thread.Sleep(5000); // пауза за наблюдением результата поиска, для наглядности
-            //driver.FindElement(By.CssSelector("a#logo")).Click(); // возвращаемся на главную страницу кликнув по логотипу
-            Thread.Sleep(5000); // пауза за наблюдением перехода на главную, для наглядности
+            driver.FindElement(By.Id("tpl-logo")).Click();
+            var allGoods = driver.FindElements(By.CssSelector("li.zoog-top-good-item"));
+
+            Assert.That(allGoods, Is.Not.Null, "There is no goods are displayed");
+        }
+
+        public static void Case_5()
+        {
+            Case_4();
+            var allGoods = driver.FindElements(By.CssSelector("li.zoog-top-good-item"));
+            allGoods[1].Click();
+            Thread.Sleep(5000);
+            driver.FindElement(By.CssSelector("a.ph-new-catalog-unit-buy")).Click();
+            var oneCountDisplay = driver.FindElement(By.CssSelector("span.tpl-unit-goodsinbasket")).Displayed;
+
+            Assert.That(oneCountDisplay, Is.True, "Plus minus increment doesn't exist on page");
+        }
+
+
+        public static void Case_6()
+        {
+            driver.FindElement(By.CssSelector("span.icon-cart")).Click();
+            Thread.Sleep(5000);
+            var headerText = driver.FindElement(By.CssSelector("div.tpl-page-header")).Text;
+
+            Assert.That(headerText, Is.EqualTo("Корзина"), "Wrong header name");
+
+        }
+
+
+        public static void Case_7()
+        {
+            Thread.Sleep(200000);
+        }
+
+        public static void Case_8()
+        {
+            //driver.FindElement(By.CssSelector("span.header-profile-ico")).Click();
+            //driver.FindElement(By.CssSelector("span::after")).Click();
+            Thread.Sleep(50000);
+            //driver.FindElement(By.Id("wlpeLogoutButton")).Click();
         }
     }
 }

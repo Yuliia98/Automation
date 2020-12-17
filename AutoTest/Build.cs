@@ -17,16 +17,28 @@ namespace Context
                 switch (step)
                 {
                     case "1":
-                        Test.Test_2();
+                        Test.Case_1();
                         break;
                     case "2":
-                        Test.Test_3();
+                        Test.Case_2();
                         break;
                     case "3":
-                        Test.Test_4();
+                        Test.Case_3();
                         break;
                     case "4":
-                        Test.Test_5();
+                        Test.Case_4();
+                        break;
+                    case "5":
+                        Test.Case_5();
+                        break;
+                    case "6":
+                        Test.Case_6();
+                        break;
+                    case "7":
+                        Test.Case_7();
+                        break;
+                    case "8":
+                        Test.Case_8();
                         break;
                 }
             }
